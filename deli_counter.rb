@@ -26,8 +26,13 @@ else
      puts new_person_in_line
    end
 #Serving method
-  def now_serving(katz_deli)
-    if line(katz_deli) == "The line is currently empty."
-    puts "There is nobody waiting to be served!"
-  end
-  end
+def now_serving(katz_deli)
+   if katz_deli.length == 0
+   puts "There is nobody waiting to be served!"
+   else
+       puts "Currently serving #{katz_deli[0]}."
+        katz_deli.shift
+        katz_deli
+ end
+ end
+now_serving(array)
